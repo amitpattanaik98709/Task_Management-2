@@ -9,6 +9,9 @@ const jwt = require("jsonwebtoken");
 app.use(express.json());
 app.use(cors());
 
+app.get("/",(req,res)=>{
+  res.send("hello from backend");
+})
 app.post("/", async (req, res) => {
   console.log(req.body);
   try {
